@@ -18,8 +18,11 @@ public class taxi extends car implements vehicleHelper {
 //        this.wheels = wheels;
     }
 
-    public ChngeDriverValue() {
-        if (driver == true){ ;
+    /* Non static function - can  be called  from an object
+       static function -  can be called form class or object
+    */
+    public static void  ChangeDriverValue() {
+        if(driver == true){
         driver = false;
     }
     else
@@ -29,8 +32,15 @@ public class taxi extends car implements vehicleHelper {
 
 }
 
+//create a static function getDriverValue , which  returns  the driver value
+    public static boolean getDriverValue(){
+        return driver;
+    }
+
+
 //for taxi , when engine is started , meter is also turned on .
     public static void main(String[] args) {
+
         taxi taxi = new taxi(4,10,"blue");
         taxi.startEngine();
         System.out.println(taxi.getFare());
@@ -40,16 +50,29 @@ public class taxi extends car implements vehicleHelper {
         System.out.println(taxi.fare);
         System.out.println(taxi.color);
 
-        taxi taxi1 = new taxi(4,10,"blue");
-        taxi1.driver = true;
-        System.out.println(taxi1.color);
+        /*
+        Normal attribute - color (attached to an object , and  changes for every object)
+        static attributr - driver (attached to the class , remain same for all object )
+        */
 
-        taxi taxi2 = new taxi(4,100,"red");
-        System.out.println(taxi2.color);
-        taxi2.driver = false;
+//        taxi taxi1 = new taxi(4,10,"blue");
+//        taxi1.driver = true;
+//        System.out.println(taxi1.color);
+//
+//        taxi taxi2 = new taxi(4,100,"red");
+//        System.out.println(taxi2.color);
+//        taxi2.driver = false;
+//
+//        System.out.println(taxi2.driver);
+//        System.out.println(taxi1.driver);
 
-        System.out.println(taxi2.driver);
-        System.out.println(taxi1.driver);
+
+
+       taxi.driver = true;
+       taxi.ChangeDriverValue();
+       System.out.println(getDriverValue());
+       taxi.ChangeDriverValue();
+       System.out.println(getDriverValue());
 
     }
 
