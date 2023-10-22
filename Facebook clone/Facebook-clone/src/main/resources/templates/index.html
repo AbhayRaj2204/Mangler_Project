@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friendbook</title>
+    <link rel="stylesheet" href="" th:href="@{/style.css}"/>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="https://www.facebook.com/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.facebook.com/favicon.icos"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="background-color: #f0f2f5;">
+    <div class="container" style="display: flex; margin: 10%;">
+      <section class="left" style=" width: 50%;margin-right: 0;padding-right: 32px;top: 50%;">
+        <div class="left-sys">
+          <img
+            src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+            alt="facebook logo"
+            height="100"
+          />
+          <div class="desc">
+            Friendbook helps you connect and share with the people in your life.
+          </div>
+        </div>
+      </section>
+      <section class="right" style="display: flex;justify-content: center;">
+        <div class="card" style="background-color: #fff; width: 25rem;height: 45vh;padding-top: 8px;padding-bottom: 16px;z-index: 5;border-radius: 8px;display: flex;flex-direction: column;align-items: center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);">
+          <input
+            type="email"
+            class="inn"
+            placeholder="Email address or phone number"
+           required/>
+          
+          <input type="password" class="inn" placeholder="Password" />
+          
+          <a href="profile"><button class="inn login-btn">Log in</button></a>
+          
+          <a href="forgot_password.html" class="inn fgt-pass"
+            >Forgotten password?</a>
+          <br>
+          <br>
+          
+       
+          <div class="inn hr"></div>
+          <a href="new_user"
+            ><button class="inn cna-btn">Create new account</button></a>
+            <br>
+        </div>
+        <!-- <div class="bottom-link-div">
+          <p class="bottom-link">
+            <strong style="cursor: pointer">Create a Page</strong> for a
+            celebrity, brand or business.
+          </p>
+        </div> -->
+      </section>
+    </div>
+  </body>
+</html>
